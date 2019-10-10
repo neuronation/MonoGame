@@ -5,7 +5,6 @@
 using System;
 using System.IO;
 using System.Runtime.InteropServices;
-using System.Drawing;
 using MonoGame.Utilities.Png;
 
 #if MONOMAC
@@ -38,6 +37,8 @@ using GLPixelFormat = OpenTK.Graphics.ES20.PixelFormat;
 
 #if ANDROID
 using Android.Graphics;
+#else
+using System.Drawing;
 #endif
 #endif // OPENGL
 
