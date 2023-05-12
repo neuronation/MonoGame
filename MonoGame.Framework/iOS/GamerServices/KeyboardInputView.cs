@@ -94,7 +94,7 @@ namespace Microsoft.Xna.Framework {
 
 			var toolbarItems = new UIBarButtonItem[] {
 				new UIBarButtonItem (UIBarButtonSystemItem.Cancel, CancelButton_Tapped),
-				new UIBarButtonItem (UIBarButtonSystemItem.FlexibleSpace, null),
+				new UIBarButtonItem (UIBarButtonSystemItem.FlexibleSpace, FlexibleSpaceButton_Tapped),
 				new UIBarButtonItem (UIBarButtonSystemItem.Done, DoneButton_Tapped)
 			};
 
@@ -256,7 +256,13 @@ namespace Microsoft.Xna.Framework {
 			OnInputCanceled (e);
 		}
 
-		private void OnInputAccepted(EventArgs e)
+        private void FlexibleSpaceButton_Tapped (object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void OnInputAccepted(EventArgs e)
 		{
 			var handler = InputAccepted;
 			if (handler != null)
